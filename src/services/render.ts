@@ -104,6 +104,25 @@ function shell(title: string, path: string, body: string, description: string) {
       .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
       .card h3 { margin: 12px 0 10px; font-size: 30px; line-height: 1.05; }
       .card p, li { color: var(--muted); line-height: 1.6; }
+      .proof-band {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .proof-card {
+        background:
+          linear-gradient(145deg, rgba(103, 224, 190, 0.08), rgba(125, 196, 255, 0.04)),
+          rgba(16, 32, 50, 0.72);
+        border: 1px solid rgba(125, 196, 255, 0.14);
+        border-radius: 22px;
+        padding: 18px;
+      }
+      .proof-card strong {
+        display: block;
+        color: var(--text);
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
       .table-wrap { overflow-x: auto; }
       table { width: 100%; border-collapse: collapse; }
       th, td { text-align: left; padding: 12px; border-bottom: 1px solid rgba(125, 196, 255, 0.12); vertical-align: top; }
@@ -134,7 +153,9 @@ function shell(title: string, path: string, body: string, description: string) {
       <div class="footer">
         <span>${productTitle}</span>
         <a href="${domain}">${domain.replace("https://", "")}</a>
-        <a href="https://github.com/mizcausevic-dev/">GitHub</a>
+        <a href="https://github.com/mizcausevic-dev/board-decision-owner-continuity-scorecard">Repository</a>
+        <a href="https://portfolio.kineticgain.com/">Portfolio</a>
+        <a href="https://suite.kineticgain.com/">Kinetic Gain Suite</a>
         <a href="https://www.linkedin.com/in/mirzacausevic/">LinkedIn</a>
         <a href="https://kineticgain.com/">Kinetic Gain</a>
       </div>
@@ -203,6 +224,19 @@ export function renderOwnerContinuityOverview() {
       <h2>Continuity lane</h2>
       <p class="lede">${escapeHtml(executiveSummary.boardMessage)}</p>
       <div class="grid">${cards}</div>
+    </section>
+    <section class="section">
+      <h2>Product depth</h2>
+      <p class="lede">This is the continuity layer for executive accountability. It helps leaders see whether a decision can survive handoffs, reorganizations, vendor changes, and board scrutiny without losing the final accountable owner.</p>
+      <div class="proof-band">
+        <div class="proof-card"><strong>Buyer value</strong><p>Shows CEOs, operators, and investors where ownership has become too fragile to support another strategic cycle.</p></div>
+        <div class="proof-card"><strong>Technical proof</strong><p>Converts owner-of-record lanes, continuity breaks, change frequency, evidence coverage, and board confidence into reproducible JSON and static routes.</p></div>
+        <div class="proof-card"><strong>GTM story</strong><p>Positions Kinetic Gain as the operating system that turns vague owner risk into a board-ready continuity scorecard.</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>What these repos have in common</h2>
+      <p class="lede">Kinetic Gain executive-intelligence repos use the same proof pattern: structured sample data, deterministic scoring, board-readable pages, CLI output, API routes, prerendered static assets, screenshots, and verification notes. The goal is a repeatable packet that a non-technical executive can read and a technical reviewer can inspect.</p>
     </section>
     <section class="section">
       <h2>Board-visible continuity exposures</h2>

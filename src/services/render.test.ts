@@ -13,6 +13,14 @@ describe("render", () => {
     expect(renderOwnerContinuityOverview()).toContain("Board Decision Owner Continuity Scorecard");
   });
 
+  it("renders the product depth and shared proof pattern", () => {
+    const html = renderOwnerContinuityOverview();
+    expect(html).toContain("Product depth");
+    expect(html).toContain("What these repos have in common");
+    expect(html).toContain("portfolio.kineticgain.com");
+    expect(html).toContain("board-decision-owner-continuity-scorecard");
+  });
+
   it("renders the continuity lane route", () => {
     expect(renderContinuityLane()).toContain("/continuity-lane");
   });
